@@ -40,6 +40,12 @@ export class StoreComponent {
         this.changePage(1);
     }
 
+    get pageCount(): number {
+        let pagecount = Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage);
+        console.log('pagecount', pagecount);
+        return pagecount;
+    }
+
     get pageNumbers(): number[] {
         console.log('pageNumbers');
         return Array(Math.ceil(this.repository

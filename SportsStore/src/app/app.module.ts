@@ -4,17 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ModelModule } from './model/model.module';
 import { FormsModule } from "@angular/forms";
-import { StoreComponent } from './store/store.component';
+
+import { StoreModule } from './store/store.module';
 @NgModule({
   declarations: [
-    AppComponent, StoreComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ModelModule,
-    FormsModule
+    FormsModule,
+    StoreModule
   ],
-  exports: [StoreComponent],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
