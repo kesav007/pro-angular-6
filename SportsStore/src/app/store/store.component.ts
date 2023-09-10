@@ -12,6 +12,7 @@ export class StoreComponent {
     public selectedCategory: string = null;
     public productsPerPage = 4;
     public selectedPage = 1;
+    
     constructor(private repository: ProductRepository, private cart: Cart,
         private router: Router) { }
 
@@ -50,7 +51,7 @@ export class StoreComponent {
 
     addProductToCart(product: Product){
         this.cart.addLine(product);
-        this.router.navigateByUrl("/cart");
+        // this.router.navigateByUrl("/cart");
     }
 /*
     get pageNumbers(): number[] {
