@@ -8,6 +8,7 @@ import { StoreComponent } from './store/store.component';
 import { CartDetailComponent } from './store/cart-detail.component';
 import { CheckoutComponent } from './store/checkout.component';
 import { StoreFirstGuard } from './store/store-first.guard';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,11 @@ import { StoreFirstGuard } from './store/store-first.guard';
       { path: "store", component: StoreComponent, canActivate: [StoreFirstGuard] },
       { path: "cart", component: CartDetailComponent, canActivate: [StoreFirstGuard] },
       { path: "checkout", component: CheckoutComponent, canActivate: [StoreFirstGuard] },
+      {
+        path: "admin",
+        loadChildren: () => import('./admin/admin.module').then(x => x.AdminModule),
+        canActivate: [StoreFirstGuard]
+      },
       { path: "**", redirectTo: "/store" },
     ])],
   providers: [StoreFirstGuard],

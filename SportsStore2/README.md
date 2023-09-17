@@ -31,3 +31,8 @@ Listing 7-2. Adding a Script in the package.json File in the SportsStore Folder
 
 npm run json
 ng serve --port 3000 --open
+
+http://localhost:3500/products
+http://localhost:3500/db
+
+exports is module ?

@@ -11,10 +11,10 @@ import { CartDetailComponent } from './cart-detail.component';
 import { CheckoutComponent } from './checkout.component';
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule, RouterModule],
-    declarations: [StoreComponent, CounterDirective, 
-        CartSummaryComponent, CartDetailComponent, 
+    declarations: [StoreComponent, CounterDirective,
+        CartSummaryComponent, CartDetailComponent,
         CheckoutComponent],
     exports: [StoreComponent, CartDetailComponent, CheckoutComponent]
 })
 
-export class StoreModule{}
+export class StoreModule { }
