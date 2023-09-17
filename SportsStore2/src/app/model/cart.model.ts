@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
-import { StaticDataSource } from "./static.datasource";
 
 @Injectable()
 export class Cart {
@@ -40,6 +39,12 @@ export class Cart {
             this.cartPrice += (line.quantity * line.product.price);
             this.itemCount += line.quantity;
         });
+    }
+
+    clear() {
+        this.lines = [];
+        this.itemCount = 0;
+        this.cartPrice = 0;
     }
 }
 
