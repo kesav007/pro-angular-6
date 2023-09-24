@@ -12,6 +12,7 @@ import { OrderRepository } from 'src/app/model/order.repository';
 export class CartCheckoutComponent {
   submitted: boolean = false;
   orderSent: boolean = false;
+  
   constructor(public repository: OrderRepository, public order: Order) { }
 
   submitOrder(form: NgForm) {
